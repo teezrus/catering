@@ -1,2 +1,33 @@
+html,
 body {
+   height: 100%;
+}
+
+body {
+   color: $default;
+   @extend %rubik-400;
+   font-size: 16px;
+   line-height: 1.3em;
+   user-select: none;
+   display: flex;
+   flex-direction: column;
+
+}
+
+main {
+   flex-grow: 1;
+}
+
+a {
+   color: $title;
+   font-size: 16px;
+   line-height: 1.3em;
+}
+
+.title {
+   text-transform: uppercase;
+   font-size: 50px;
+   line-height: 1.3em;
+   text-align: center;
+   @extend %rubik-700;
 }

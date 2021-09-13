@@ -1,0 +1,127 @@
+/**
+  * SimpleAdaptiveSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
+  * Copyright 2020 - 2021 Alexander Maltsev
+  * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+  */
+
+/* стили для корневого элемента слайдера */
+
+.slider {
+   position: relative;
+   overflow: hidden;
+   max-width: 700px;
+   margin: 40px 10px 0;
+}
+
+/* стили для wrapper */
+.slider__wrapper {
+   position: relative;
+   overflow: hidden;
+   background-color: transparent;
+}
+
+/* стили для элемента, в котором непосредственно расположены элементы (слайды) */
+.slider__items {
+   display: flex;
+   transition: transform 0.5s ease;
+}
+
+/* класс для отключения transition */
+.transition-none {
+   transition: none;
+}
+
+/* стили для элементов */
+.slider__item {
+   flex: 0 0 100%;
+   max-width: 100%;
+   position: relative;
+   border-radius: 20px;
+   overflow: hidden;
+
+   img {
+      object-fit: cover;
+      width: 100%;
+      height: 400px;
+   }
+}
+
+/* кнопки Prev и Next */
+.slider__control {
+   position: absolute;
+   top: 50%;
+   width: 40px;
+   height: 50px;
+   transform: translateY(-50%);
+   display: none;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   user-select: none;
+}
+
+.slider__control_show {
+   display: flex;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+   color: #fff;
+   text-decoration: none;
+   opacity: 0.7;
+}
+
+.slider__control-prev {
+   left: 0;
+}
+
+.slider__control-next {
+   right: 0;
+}
+
+.slider__control::before {
+   content: '';
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   background: transparent no-repeat center center;
+   background-size: 100% 100%;
+}
+
+.slider__control-prev::before {
+   background-image: url(../images/icon/arrow-left.svg);
+}
+
+.slider__control-next::before {
+   background-image: url(../images/icon/arrow-right.svg);
+}
+
+/* Индикаторы */
+.slider__indicators {
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 15px;
+   display: flex;
+   justify-content: center;
+   padding-left: 0;
+   margin: 0 15%;
+   list-style: none;
+   user-select: none;
+}
+
+.slider__indicator {
+   flex: 0 1 auto;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   margin-right: 3px;
+   margin-left: 3px;
+   background-color: #fff;
+   cursor: pointer;
+
+}
+
+.slider__indicator_active {
+   background-color: $accent;
+}

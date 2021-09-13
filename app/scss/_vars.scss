@@ -1,0 +1,34 @@
+$accent: #ff9400;
+$default:#252525;
+$title: #d9d9d9;
+
+
+%rubik-400 {
+   font-family: "Rubik-Regular", sans-serif;
+   font-weight: 400;
+}
+
+%rubik-500 {
+   font-family: "Rubik-Medium", sans-serif;
+   font-weight: 500;
+}
+
+%rubik-700 {
+   font-family: "Rubik-Bold", sans-serif;
+   font-weight: 700;
+}
+
+%padding {
+   padding: 10px calc(50% - 700px);
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+%btn {
+   padding: 10px 20px;
+   border: none;
+   color: $default;
+   background-color: $title;
+   border-radius: 15px;
+   cursor: pointer;
+}

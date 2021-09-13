@@ -2,5 +2,236 @@
 @import "fonts";
 @import "reset";
 @import "global";
+@import "slider";
+
+.header {
+   @extend %padding;
+   background-color: $default;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   .logo {
+      margin-left: 10px;
+
+      img {
+         max-width: 150px;
+      }
+   }
+
+   .social {
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+
+      &__link {
+         margin: 0 10px;
+         height: 20px;
+
+         path {
+            transition: all .3s;
+         }
+
+         &:hover {
+            path {
+               fill: #ffce8a;
+            }
+         }
+      }
+   }
+
+   &__btn {
+      @extend %btn;
+      margin-right: 10px;
+      transition: all .3s;
+
+      &:hover {
+         background-color: $accent;
+         color: $title;
+      }
+   }
+}
+
+.menu {
+   margin-right: auto;
+   margin-left: 50px;
+
+   &__list {
+      display: flex;
+   }
+
+   &__item {
+      margin: 0 20px;
+   }
+
+   &__item-link {
+      transition: all .3s;
+
+      &:hover {
+         color: $accent;
+      }
+   }
+
+   &__item-social {
+      display: none;
+   }
+}
+
+.menu-btn {
+   display: none;
+}
+
+
+.top {
+   @extend %padding;
+   background-image: url(../images/top-bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   color: $title;
+   height: calc(100vh - 71px);
+   padding: 40px 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+   &__text {
+      max-width: 840px;
+      @extend %rubik-500;
+      line-height: 1.4em;
+      font-size: 28px;
+   }
+
+   &__btn {
+      @extend %btn;
+      max-width: 300px;
+      padding: 20px 20px;
+      color: $default;
+      background: linear-gradient(180deg, $accent, #ffcb52);
+      box-shadow: 0 0 20px $accent;
+      transition: all .3s;
+
+      &:hover {
+         background: linear-gradient(180deg, $accent, $accent);
+         color: $title;
+      }
+   }
+}
+
+.slider-one {
+   @extend %padding;
+   padding-top: 50px;
+   padding-bottom: 50px;
+
+
+   &__video {
+      margin: 40px 10px 0;
+   }
+
+   &__title {
+      margin-bottom: 30px;
+      background: linear-gradient(45deg, $accent, #fab397);
+      color: transparent;
+      background-clip: text;
+   }
+
+   &__video-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+   }
+
+   &__text {
+      @extend %rubik-700;
+      font-size: 22px;
+      color: $default;
+      text-align: center;
+      max-width: 70%;
+      margin: 0 auto;
+
+
+   }
+
+   &__content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+
+   &__video-title {
+      text-align: center;
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 20px;
+      color: $default;
+
+      span {
+         color: $accent;
+         position: absolute;
+         bottom: 0;
+         right: 95px;
+
+      }
+   }
+}
+
+.open-popup {
+   border-radius: 20px;
+   overflow: hidden;
+   position: relative;
+   width: 526px;
+
+   &__svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+   img {
+      width: 100%;
+   }
+}
+
+.video__popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.9);
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.5s all;
+}
+
+.video__popup.active {
+   opacity: 1;
+   pointer-events: all;
+   transition: 0.5s all;
+}
+
+.popup {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   background: transparent;
+   transition: 0.5s all;
+}
+
+.popup.active {
+   transform: translate(-50%, -50%) scale(1);
+   transition: 0.5s all;
+}
+
+.close-popup {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+}
+
 
 @import "media";
