@@ -98,13 +98,18 @@
       padding: 25px;
       height: calc(100vh - 63px);
 
-      &__title {
-         font-size: 30px;
-      }
-
       &__text {
          font-size: 17px;
+         margin-left: 0;
       }
+
+      &__btn {
+         margin-left: 0;
+      }
+   }
+
+   .title {
+      font-size: 30px;
    }
 
    .slider-one__video {
@@ -114,6 +119,10 @@
 
    .open-popup {
       width: 100%;
+   }
+
+   .contact__box {
+      flex-direction: column;
    }
 }
 
@@ -152,5 +161,35 @@
    .slider-one__text {
       font-size: 12px;
       max-width: 90%;
+   }
+
+   .price-bottom {
+      padding: 0;
+
+      &__content {
+         text-align: center;
+      }
+
+      &__content,
+      &__form {
+         margin: 30px 5px 0 5px;
+      }
+   }
+
+   .price__item-info {
+      width: 100%;
+   }
+
+   .price__item-content {
+      padding-left: 0;
+   }
+
+   .footer__content-bottom {
+      flex-direction: column;
+
+   }
+
+   .footer-copy {
+      margin-top: 20px;
    }
 }

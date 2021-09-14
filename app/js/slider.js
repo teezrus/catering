@@ -1,9 +1,3 @@
-/**
- * SimpleAdaptiveSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
- * Copyright 2020 - 2021 Alexander Maltsev
- * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
- */
-
 (function () {
    if (typeof window.CustomEvent === 'function') return false;
 
@@ -20,22 +14,18 @@
    window.CustomEvent = CustomEvent;
 })();
 
-// базовые классы и селекторы
 var WRAPPER_SELECTOR = '.slider__wrapper';
 var ITEMS_SELECTOR = '.slider__items';
 var ITEM_SELECTOR = '.slider__item';
 var ITEM_CLASS_ACTIVE = 'slider__item_active';
 var CONTROL_SELECTOR = '.slider__control';
 var CONTROL_CLASS_SHOW = 'slider__control_show';
-// индикаторы
 var INDICATOR_WRAPPER_ELEMENT = 'ul';
 var INDICATOR_WRAPPER_CLASS = 'slider__indicators';
 var INDICATOR_ITEM_ELEMENT = 'li';
 var INDICATOR_ITEM_CLASS = 'slider__indicator';
 var INDICATOR_ITEM_CLASS_ACTIVE = 'slider__indicator_active';
-// порог для переключения слайда (40%)
 var SWIPE_THRESHOLD = 20;
-// класс для отключения transition
 var TRANSITION_NONE = 'transition-none';
 
 function SimpleAdaptiveSlider(selector, config) {

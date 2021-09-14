@@ -1,0 +1,80 @@
+.price {
+   @extend %padding;
+   padding-top: 70px;
+   padding-bottom: 70px;
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__item-box {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+   }
+
+
+   &__item {
+      color: $default;
+      transition: all .3s;
+      text-transform: uppercase;
+      @extend %rubik-700;
+      margin: 10px;
+   }
+
+
+   &__item.active {
+      color: $accent;
+   }
+
+   &__item-sum {
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: $accent;
+      cursor: default;
+      color: #fff;
+      @extend %btn;
+   }
+
+   &__item-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__item-info {
+      padding-left: 30px;
+      margin: 15px 15px;
+      position: relative;
+      width: 45%;
+
+      &::before {
+         content: '';
+         left: 0;
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         border-radius: 7px;
+         overflow: hidden;
+         background: url(../images/icon/checkbox-checked.svg) center no-repeat;
+      }
+   }
+
+
+
+
+
+
+
+   &__item-list {
+      display: none;
+   }
+
+   &__item-list.active {
+      display: block;
+   }
+
+
+}

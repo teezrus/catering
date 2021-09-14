@@ -1,11 +1,3 @@
-/**
-  * SimpleAdaptiveSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
-  * Copyright 2020 - 2021 Alexander Maltsev
-  * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
-  */
-
-/* стили для корневого элемента слайдера */
-
 .slider {
    position: relative;
    overflow: hidden;
@@ -13,14 +5,12 @@
    margin: 40px 10px 0;
 }
 
-/* стили для wrapper */
 .slider__wrapper {
    position: relative;
    overflow: hidden;
    background-color: transparent;
 }
 
-/* стили для элемента, в котором непосредственно расположены элементы (слайды) */
 .slider__items {
    display: flex;
    transition: transform 0.5s ease;
@@ -31,7 +21,6 @@
    transition: none;
 }
 
-/* стили для элементов */
 .slider__item {
    flex: 0 0 100%;
    max-width: 100%;
@@ -46,7 +35,6 @@
    }
 }
 
-/* кнопки Prev и Next */
 .slider__control {
    position: absolute;
    top: 50%;
@@ -66,8 +54,6 @@
 
 .slider__control:hover,
 .slider__control:focus {
-   color: #fff;
-   text-decoration: none;
    opacity: 0.7;
 }
 
@@ -96,7 +82,6 @@
    background-image: url(../images/icon/arrow-right.svg);
 }
 
-/* Индикаторы */
 .slider__indicators {
    position: absolute;
    left: 0;
