@@ -124,6 +124,20 @@
    .contact__box {
       flex-direction: column;
    }
+
+   .thanks-popup {
+      &__content {
+         max-width: 90%;
+         width: 100%;
+         min-height: 60%;
+
+      }
+
+   }
+
+   .header-popup__form {
+      margin: 0;
+   }
 }
 
 @media (max-width:480px) {
