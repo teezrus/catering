@@ -112,6 +112,7 @@
       padding: 20px 20px;
       margin-left: 20px;
       color: $default;
+      text-align: center;
       background: linear-gradient(180deg, $accent, #ffcb52);
       box-shadow: 0 0 20px $accent;
       transition: all .3s;
@@ -196,7 +197,9 @@
    }
 }
 
-.video__popup {
+.video__popup,
+.header-popup,
+.thanks-popup {
    position: fixed;
    top: 0;
    left: 0;
@@ -208,13 +211,17 @@
    transition: 0.5s all;
 }
 
-.video__popup.active {
+.video__popup.active,
+.header-popup.active,
+.thanks-popup.active {
    opacity: 1;
    pointer-events: all;
    transition: 0.5s all;
 }
 
-.popup {
+.popup,
+.header-popup__form,
+.thanks-popup__content {
    position: absolute;
    top: 50%;
    left: 50%;
@@ -223,7 +230,9 @@
    transition: 0.5s all;
 }
 
-.popup.active {
+.popup.active,
+.header-popup__form.active,
+.thanks-popup__content.active {
    transform: translate(-50%, -50%) scale(1);
    transition: 0.5s all;
 }
@@ -280,6 +289,48 @@
 
 }
 
+.header-popup,
+.price-bottom {
+   &__form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid $title;
+      box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 40px;
+   }
+
+   &__form-title {
+      text-align: center;
+      font-size: 20px;
+   }
+
+   &__input {
+      border: none;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid $accent;
+      border-radius: 10px;
+   }
+
+   &__btn {
+      @extend %btn;
+      margin-top: 20px;
+      background-color: $accent;
+      color: $title;
+      transition: all .3s;
+
+      &:hover {
+         color: #fff;
+      }
+   }
+
+}
+
 .price-bottom {
    margin-top: 20px;
    padding: 30px;
@@ -309,44 +360,6 @@
       font-size: 20px;
       color: $default;
    }
-
-   &__form {
-      display: flex;
-      flex-direction: column;
-      max-width: 300px;
-      width: 100%;
-      border: 1px solid $title;
-      box-shadow: 0 0 40px rgba(0, 0, 0, .3);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 40px;
-   }
-
-   &__form-title {
-      text-align: center;
-      font-size: 20px;
-   }
-
-   &__input {
-      border: none;
-      margin: 20px 0;
-      padding: 10px;
-      border: 1px solid $accent;
-      border-radius: 10px;
-   }
-
-   &__btn {
-      @extend %btn;
-      margin-top: 20px;
-      background-color: $accent;
-      color: $title;
-      transition: all .3s;
-
-      &hover {
-         color: #fff;
-      }
-   }
-
 }
 
 .contact {
